@@ -837,8 +837,10 @@ void BitcoinGUI::gotoOverviewPage()
 #ifdef ENABLE_ELYSIUM
 void BitcoinGUI::gotoElysiumTokensPage()
 {
-    elysiumTokensAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoElysiumTokensPage();
+    if (isElysiumEnabled()) {
+        elysiumTokensAction->setChecked(true);
+        if (walletFrame) walletFrame->gotoElysiumTokensPage();
+    }
 }
 #endif
 
@@ -847,14 +849,6 @@ void BitcoinGUI::gotoHistoryPage()
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
-
-#ifdef ENABLE_ELYSIUM
-void BitcoinGUI::gotoElysiumHistoryTab()
-{
-    historyAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoElysiumHistoryTab();
-}
-#endif
 
 void BitcoinGUI::gotoBitcoinHistoryTab()
 {

@@ -134,15 +134,6 @@ void WalletFrame::gotoHistoryPage()
         i.value()->gotoHistoryPage();
 }
 
-#ifdef ENABLE_ELYSIUM
-void WalletFrame::gotoElysiumHistoryTab()
-{
-    QMap<QString, WalletView*>::const_iterator i;
-    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
-        i.value()->gotoElysiumHistoryTab();
-}
-#endif
-
 void WalletFrame::gotoBitcoinHistoryTab()
 {
     QMap<QString, WalletView*>::const_iterator i;

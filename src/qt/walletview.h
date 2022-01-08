@@ -108,7 +108,6 @@ private:
     ElyAssetsDialog *elyAssetsPage;
     QWidget *toolboxPage;
     TXHistoryDialog *elysiumTransactionsView;
-    QTabWidget *transactionTabs;
     QTabWidget *sendCoinsTabs;
 
     QWidget *elysiumTokensPage;
@@ -148,10 +147,6 @@ public Q_SLOTS:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
 #ifdef ENABLE_ELYSIUM
-    /** Switch specifically to elysium tx history tab */
-    void gotoElysiumHistoryTab();
-    /** Switch to elysium tx history tab and focus on specific transaction */
-    void focusElysiumTransaction(const uint256& txid);
     /** Switch to Elysium Tokens Page */
     void  gotoElysiumTokensPage();
 #endif

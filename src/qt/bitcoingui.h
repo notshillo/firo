@@ -215,8 +215,6 @@ private Q_SLOTS:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
 #ifdef ENABLE_ELYSIUM
-    /** Switch directly to Elysium history tab */
-    void gotoElysiumHistoryTab();
     /** Switch to Elysium Tokens Page */
     void gotoElysiumTokensPage();
 #endif
